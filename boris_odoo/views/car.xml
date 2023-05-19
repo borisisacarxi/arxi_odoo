@@ -10,10 +10,11 @@
 					<group>
 						<field name="name"/>
 						<field name="hps_car"/>
+						<field name="doors_car"/>
 					</group>
 					<group>
-						<field name="doors_car"/>
 						<field name="driver_id"/>
+						<field name="feature_ids" widget="many2many_tags"/>
 					</group>
 				</group>
 			</form>

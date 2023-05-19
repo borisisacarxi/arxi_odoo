@@ -11,6 +11,7 @@ class Car ( models.Model ) :
 
 	driver_id = fields.Many2one ( 'res.partner', string = 'Driver' )
 	parking_id = fields.Many2one ( 'parking.parking', string = 'Parking Position' )
+	feature_ids = fields.Many2many ( 'car.feature', string = 'Features' )
 
 
 class Parking ( models.Model ) :
@@ -19,3 +20,10 @@ class Parking ( models.Model ) :
 
 	name = fields.Char ( string = "Parking's position" )
 	car_ids = fields.One2many ( 'car.car', 'parking_id' )
+
+
+class car_features ( models.Model ) :
+	_name = 'car.feature'
+	_description = 'car_feature'
+
+	name = fields.Char ( string = 'Name' )
