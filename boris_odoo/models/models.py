@@ -16,3 +16,16 @@
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
+
+
+# -*- coding: utf-8 -*-
+from odoo import models, fields, api
+
+
+class Car(models.Model):
+    _name = 'car.car'
+    _description = 'Cars'
+
+    name = fields.Char(string='Model')
+    hp_car = fields.Integer(string = "HP's Car")
+    doors_car = fields.Integer(string = "Doors's Car")

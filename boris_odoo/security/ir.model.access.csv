@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_boris_odoo_boris_odoo,boris_odoo.boris_odoo,model_boris_odoo_boris_odoo,base.group_user,1,1,1,1
+boris_odoo.access_car_car,access_car_car,boris_odoo.model_car_car,base.group_user,1,1,1,1
