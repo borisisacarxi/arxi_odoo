@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 boris_odoo.access_car_car,access_car_car,boris_odoo.model_car_car,base.group_user,1,1,1,1
+boris_odoo.access_parking_parking,access_parking_parking,boris_odoo.model_parking_parking,base.group_user,1,1,1,1

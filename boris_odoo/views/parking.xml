@@ -1,0 +1,38 @@
+<odoo>
+	<!--form initialization for parking-->
+	<record id="parking_form" model="ir.ui.view">
+		<field name="name">Parking</field>
+		<field name="model">parking.parking</field> <!-- Corrected attribute name to "model" -->
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="name"/>
+					<field name="car_ids"/>
+				</group>
+			</form>
+		</field>
+	</record>
+
+	<!--tree initialization for parking-->
+	<record id="parking_tree" model="ir.ui.view">
+		<field name="name">Parking</field>
+		<field name="model">parking.parking</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name"/>
+				<field name="car_ids"/>
+			</tree>
+		</field>
+	</record>
+
+	<!--action initialization for parking-->
+	<record id="parking_action" model="ir.actions.act_window">
+		<field name="name">Parking</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">parking.parking</field> <!-- Corrected attribute name to "res_model" -->
+		<field name="view_mode">tree,form</field> <!-- Corrected attribute name to "view_mode" -->
+	</record>
+	<menuitem id="parking_menu" name="Parking" sequence="1" parent="cars_menu" action="parking_action"/>
+
+
+</odoo>
