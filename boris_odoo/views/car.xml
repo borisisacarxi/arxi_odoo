@@ -15,6 +15,8 @@
 					<group>
 						<field name="driver_id"/>
 						<field name="feature_ids" widget="many2many_tags"/>
+						<field name="greating_label"/>
+						<field name="total_spead"/>
 					</group>
 				</group>
 			</form>
@@ -24,7 +26,7 @@
 	<!--tree initialization for car-->
 	<record id="car_tree" model="ir.ui.view">
 		<field name="name">car</field>
-		<field name="model">car.car</field> <!-- Corrected attribute name to "model" -->
+		<field name="model">car.car</field>
 		<field name="arch" type="xml">
 			<tree>
 				<field name="name"/>
@@ -38,8 +40,8 @@
 	<record id="cars_action" model="ir.actions.act_window">
 		<field name="name">Car</field>
 		<field name="type">ir.actions.act_window</field>
-		<field name="res_model">car.car</field> <!-- Corrected attribute name to "res_model" -->
-		<field name="view_mode">tree,form</field> <!-- Corrected attribute name to "view_mode" -->
+		<field name="res_model">car.car</field>
+		<field name="view_mode">tree,form</field>
 	</record>
 
 	<menuitem id="cars_menu" name="Cars" sequence="200" action="cars_action"/>
