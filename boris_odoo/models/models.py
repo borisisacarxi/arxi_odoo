@@ -8,17 +8,29 @@ class Car ( models.Model ) :
 	name = fields.Char ( string = 'Name' )
 	hps_car = fields.Integer ( string = "HP's Car" )
 	doors_car = fields.Integer ( string = "Doors's Car" )
-	total_spead=fields.Integer(string = 'Function result', compute='say_hello')
+	total_spead = fields.Integer ( string = 'Function result', compute = 'say_hello' )
 
 	driver_id = fields.Many2one ( 'res.partner', string = 'Driver' )
 	parking_id = fields.Many2one ( 'parking.parking', string = 'Parking Position' )
 	feature_ids = fields.Many2many ( 'car.feature', string = 'Features' )
-	greating_label = fields.Char ( string = 'Hello', related="driver_id.name")
+	greating_label = fields.Char ( string = 'Hello', related = "driver_id.name" )
+	status = fields.Selection ( [('new', 'New'), ('used', 'Used'), ('sold', 'Sold')], string = 'status',
+	                            default = 'new' )
 
-	def say_hello( self ):
-		print('******************************************************')
-		print(self.greating_label)
+	def say_hello ( self ) :
+		print ( '******************************************************' )
+		print ( self.greating_label )
 		self.total_spead = self.doors_car * self.hps_car
+
+	def set_status_to_new ( self ) :
+		self.status = 'new'
+
+	def set_status_to_used ( self ) :
+		self.status = 'used'
+
+	def set_status_to_sold ( self ) :
+		self.status = 'sold'
+
 
 class Parking ( models.Model ) :
 	_name = 'parking.parking'

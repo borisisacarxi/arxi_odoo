@@ -6,19 +6,27 @@
 		<field name="model">car.car</field> <!-- Corrected attribute name to "model" -->
 		<field name="arch" type="xml">
 			<form>
-				<group>
+				<sheet>
+					<header>
+						<field name="status" widget="statusbar"/>
+						<button name="set_status_to_new" string="New" class="oe_highlight" type="object" attrs="{'invisible': [('status', '=','new')]}"/>
+						<button name="set_status_to_used" string="Used" class="oe_highlight" type="object" attrs="{'invisible': [('status', '=','used')]}"/>
+						<button name="set_status_to_sold" string="Sold" class="oe_highlight" type="object" attrs="{'invisible': [('status', '=','sold')]}"/>
+					</header>
 					<group>
-						<field name="name"/>
-						<field name="hps_car"/>
-						<field name="doors_car"/>
+						<group>
+							<field name="name"/>
+							<field name="hps_car"/>
+							<field name="doors_car"/>
+						</group>
+						<group>
+							<field name="driver_id"/>
+							<field name="feature_ids" widget="many2many_tags"/>
+							<field name="greating_label"/>
+							<field name="total_spead"/>
+						</group>
 					</group>
-					<group>
-						<field name="driver_id"/>
-						<field name="feature_ids" widget="many2many_tags"/>
-						<field name="greating_label"/>
-						<field name="total_spead"/>
-					</group>
-				</group>
+				</sheet>
 			</form>
 		</field>
 	</record>
