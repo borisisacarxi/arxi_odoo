@@ -15,12 +15,12 @@
 					</header>
 					<group>
 						<group>
-							<field name="name"/>
-							<field name="hps_car"/>
-							<field name="doors_car"/>
+							<field name="name" />
+							<field name="hps_car" attrs="{'readonly' : [('name','=','')]}" /> #readOnly if name is empty
+							<field name="doors_car" attrs="{'invisible' : [('hps_car','=',10)]}"/> #important argumente  shoUld be INT becouse if it str it will not work
 						</group>
 						<group>
-							<field name="driver_id"/>
+							<field name="driver_id" attrs="{'required' : [('hps_car','=',10)]}"/>
 							<field name="feature_ids" widget="many2many_tags"/>
 							<field name="greating_label"/>
 							<field name="total_spead"/>
