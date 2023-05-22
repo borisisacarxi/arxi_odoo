@@ -3,7 +3,7 @@
 <odoo>
 	<record id = "sequence_car" model = "ir.sequence">
 		<field name="name">Car</field>
-		<field name="code">car_sequence</field>
+		<field name="code">car.sequence</field>
 		<field name="prefix">Car</field>
 		<field name="padding">5</field>
 		<field name="number_next">1</field>

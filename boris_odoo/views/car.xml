@@ -18,18 +18,13 @@
 					</header>
 					<group>
 						<group>
-<<<<<<< HEAD
+
 							<field name="car_sequence" readonly="1"/>
 							<field name="name"/>
+							#readonly if name is empty
 							<field name="hps_car" attrs="{'readonly' : [('name','=','')]}"/>
-							#readOnly if name is empty
-							<field name="doors_car" attrs="{'invisible' : [('hps_car','=',10)]}"/>
 							#important argumente shoUld be INT becouse if it str it will not work
-=======
-							<field name="name" />
-							<field name="hps_car" attrs="{'readonly' : [('name','=','')]}" /> #readOnly if name is empty
-							<field name="doors_car" attrs="{'invisible' : [('hps_car','=',10)]}"/> #important argumente  shoUld be INT becouse if it str it will not work
->>>>>>> ad59e3cbbdbc1aed4bd52113712f2f66146d6454
+							<field name="doors_car" attrs="{'invisible' : [('hps_car','=',10)]}"/>
 						</group>
 						<group>
 							<field name="driver_id" attrs="{'required' : [('hps_car','=',10)]}"/>
