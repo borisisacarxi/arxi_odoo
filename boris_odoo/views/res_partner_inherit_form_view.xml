@@ -13,8 +13,17 @@
 				<field name="message" />
 			</xpath>
 		</field>
+	</record>
 
-
+	<record id="res_partner_inherit" model="ir.ui.view">
+		<field name="name">Res partner inherit</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_tree"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='phone']" position="after">
+				<field name="other_message" />
+			</xpath>
+		</field>
 	</record>
 
 </odoo>
