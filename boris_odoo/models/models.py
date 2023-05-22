@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class Car ( models.Model ) :
@@ -16,6 +16,13 @@ class Car ( models.Model ) :
 	greating_label = fields.Char ( string = 'Hello', related = "driver_id.name" )
 	status = fields.Selection ( [('new', 'New'), ('used', 'Used'), ('sold', 'Sold')], string = 'status',
 	                            default = 'new' )
+	car_sequence = fields.Char ( string = 'Sequence' )
+	@api.model
+	def create(self, vals_list):
+		vals_list['car_sequence']=self.env['ir.sequence'].next_by_code('car.sequence')
+		result = super(Car, self).create(vals_list)
+		print('***********************',result)
+		return result
 
 	def say_hello ( self ) :
 		print ( '******************************************************' )

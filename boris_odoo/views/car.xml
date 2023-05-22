@@ -9,15 +9,21 @@
 				<sheet>
 					<header>
 						<field name="status" widget="statusbar"/>
-						<button name="set_status_to_new" string="New" class="oe_highlight" type="object" attrs="{'invisible': [('status', '=','new')]}"/>
-						<button name="set_status_to_used" string="Used" class="oe_highlight" type="object" attrs="{'invisible': [('status', '=','used')]}"/>
-						<button name="set_status_to_sold" string="Sold" class="oe_highlight" type="object" attrs="{'invisible': [('status', '=','sold')]}"/>
+						<button name="set_status_to_new" string="New" class="oe_highlight" type="object"
+										attrs="{'invisible': [('status', '=','new')]}"/>
+						<button name="set_status_to_used" string="Used" class="oe_highlight" type="object"
+										attrs="{'invisible': [('status', '=','used')]}"/>
+						<button name="set_status_to_sold" string="Sold" class="oe_highlight" type="object"
+										attrs="{'invisible': [('status', '=','sold')]}"/>
 					</header>
 					<group>
 						<group>
-							<field name="name" />
-							<field name="hps_car" attrs="{'readonly' : [('name','=','')]}" /> #readOnly if name is empty
-							<field name="doors_car" attrs="{'invisible' : [('hps_car','=',10)]}"/> #important argumente  shoUld be INT becouse if it str it will not work
+							<field name="car_sequence" readonly="1"/>
+							<field name="name"/>
+							<field name="hps_car" attrs="{'readonly' : [('name','=','')]}"/>
+							#readOnly if name is empty
+							<field name="doors_car" attrs="{'invisible' : [('hps_car','=',10)]}"/>
+							#important argumente shoUld be INT becouse if it str it will not work
 						</group>
 						<group>
 							<field name="driver_id" attrs="{'required' : [('hps_car','=',10)]}"/>

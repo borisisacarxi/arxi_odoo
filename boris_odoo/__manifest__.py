@@ -29,7 +29,10 @@
 		'views/views.xml',
 		'views/templates.xml',
 		'views/car.xml',
-		'views/parking.xml'
+		'views/parking.xml',
+		'views/sequence.xml',
+		'views/res_partner_inherit_form_view.xml'
+
 	],
 	# only loaded in demonstration mode
 	'demo' : [
