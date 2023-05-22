@@ -17,15 +17,21 @@ class Car ( models.Model ) :
 	status = fields.Selection ( [('new', 'New'), ('used', 'Used'), ('sold', 'Sold')], string = 'status',
 	                            default = 'new' )
 	car_sequence = fields.Char ( string = 'Sequence' )
+
 	@api.model
-	def create(self, vals_list):
-		vals_list['car_sequence']=self.env['ir.sequence'].next_by_code('car.sequence')
-		result = super(Car, self).create(vals_list)
-		print('***********************',result)
+	def create ( self, vals_list ) :
+		result = super ( Car, self ).create ( vals_list )
 		return result
 
+	def write(self, vals_list):
+		result = super(Car, self).write(vals_list)
+		print ( vals_list )
+		return result\
+
+	def unlink(self):
+		return super(Car, self).unlink()
+
 	def say_hello ( self ) :
-		print ( '******************************************************' )
 		print ( self.greating_label )
 		self.total_spead = self.doors_car * self.hps_car
 

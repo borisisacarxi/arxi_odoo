@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
+<odoo >
 	<!--form initialization for car-->
-	<record id="car_form" model="ir.ui.view">
-		<field name="name">Car</field>
-		<field name="model">car.car</field> <!-- Corrected attribute name to "model" -->
-		<field name="arch" type="xml">
-			<form>
-				<sheet>
-					<header>
-						<field name="status" widget="statusbar"/>
-						<button name="set_status_to_new" string="New" class="oe_highlight" type="object"
-										attrs="{'invisible': [('status', '=','new')]}"/>
-						<button name="set_status_to_used" string="Used" class="oe_highlight" type="object"
-										attrs="{'invisible': [('status', '=','used')]}"/>
-						<button name="set_status_to_sold" string="Sold" class="oe_highlight" type="object"
-										attrs="{'invisible': [('status', '=','sold')]}"/>
-					</header>
-					<group>
-						<group>
+	<record id = "car_form" model = "ir.ui.view" >
+		<field name = "name" >Car</field >
+		<field name = "model" >car.car</field > <!-- Corrected attribute name to "model" -->
+		<field name = "arch" type = "xml" >
+			<form >
+				<sheet >
+					<header >
+						<field name = "status" widget = "statusbar" />
+						<button name = "set_status_to_new" string = "New" class = "oe_highlight" type = "object"
+								attrs = "{'invisible': [('status', '=','new')]}" />
+						<button name = "set_status_to_used" string = "Used" class = "oe_highlight" type = "object"
+								attrs = "{'invisible': [('status', '=','used')]}" />
+						<button name = "set_status_to_sold" string = "Sold" class = "oe_highlight" type = "object"
+								attrs = "{'invisible': [('status', '=','sold')]}" />
+					</header >
+					<group >
+						<group >
 
-							<field name="car_sequence" readonly="1"/>
-							<field name="name"/>
+							<field name = "car_sequence" readonly = "1" />
+							<field name = "name" />
 							#readonly if name is empty
-							<field name="hps_car" attrs="{'readonly' : [('name','=','')]}"/>
+							<field name = "hps_car" attrs = "{'readonly' : [('name','=','')]}" />
 							#important argumente shoUld be INT becouse if it str it will not work
-							<field name="doors_car" attrs="{'invisible' : [('hps_car','=',10)]}"/>
-						</group>
-						<group>
-							<field name="driver_id" attrs="{'required' : [('hps_car','=',10)]}"/>
-							<field name="feature_ids" widget="many2many_tags"/>
-							<field name="greating_label"/>
-							<field name="total_spead"/>
-						</group>
-					</group>
-				</sheet>
-			</form>
-		</field>
-	</record>
+							<field name = "doors_car" attrs = "{'invisible' : [('hps_car','=',10)]}" />
+						</group >
+						<group >
+							<field name = "driver_id" attrs = "{'required' : [('hps_car','=',10)]}" />
+							<field name = "feature_ids" widget = "many2many_tags" />
+							<field name = "greating_label" />
+							<field name = "total_spead" />
+						</group >
+					</group >
+				</sheet >
+			</form >
+		</field >
+	</record >
 
 	<!--tree initialization for car-->
-	<record id="car_tree" model="ir.ui.view">
-		<field name="name">car</field>
-		<field name="model">car.car</field>
-		<field name="arch" type="xml">
-			<tree>
-				<field name="name"/>
-				<field name="hps_car"/>
-				<field name="doors_car"/>
-			</tree>
-		</field>
-	</record>
+	<record id = "car_tree" model = "ir.ui.view" >
+		<field name = "name" >car</field >
+		<field name = "model" >car.car</field >
+		<field name = "arch" type = "xml" >
+			<tree >
+				<field name = "name" />
+				<field name = "hps_car" />
+				<field name = "doors_car" />
+			</tree >
+		</field >
+	</record >
 
 	<!--action initialization for car-->
-	<record id="cars_action" model="ir.actions.act_window">
-		<field name="name">Car</field>
-		<field name="type">ir.actions.act_window</field>
-		<field name="res_model">car.car</field>
-		<field name="view_mode">tree,form</field>
-	</record>
+	<record id = "cars_action" model = "ir.actions.act_window" >
+		<field name = "name" >Car</field >
+		<field name = "type" >ir.actions.act_window</field >
+		<field name = "res_model" >car.car</field >
+		<field name = "view_mode" >tree,form</field >
+	</record >
 
-	<menuitem id="cars_menu" name="Cars" sequence="200" action="cars_action"/>
+	<menuitem id = "cars_menu" name = "Cars" sequence = "200" action = "cars_action" />
 
-</odoo>
+</odoo >
