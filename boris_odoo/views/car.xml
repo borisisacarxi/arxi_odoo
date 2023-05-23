@@ -35,7 +35,6 @@
 					</header >
 					<group >
 						<group >
-
 							<field name = "car_sequence" readonly = "1" />
 							<field name = "name" />
 							#readonly if name is empty
@@ -64,6 +63,7 @@
 				<field name = "name" />
 				<field name = "hps_car" />
 				<field name = "doors_car" />
+				<field name = "total_spead"/>
 			</tree >
 		</field >
 	</record >

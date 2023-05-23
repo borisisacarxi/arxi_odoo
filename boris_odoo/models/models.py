@@ -23,17 +23,15 @@ class Car ( models.Model ) :
 		result = super ( Car, self ).create ( vals_list )
 		return result
 
-	def write(self, vals_list):
-		result = super(Car, self).write(vals_list)
-		print ( vals_list )
-		return result\
-
-	def unlink(self):
-		return super(Car, self).unlink()
+	def write ( self, vals_list ) :
+		result = super ( Car, self ).write ( vals_list )
+		return result
+	def unlink(self) :
+		return super ( Car, self ).unlink ()
 
 	def say_hello ( self ) :
-		print ( self.greating_label )
-		self.total_spead = self.doors_car * self.hps_car
+		for obj in self:
+			obj.total_spead = obj.doors_car * obj.hps_car
 
 	def set_status_to_new ( self ) :
 		self.status = 'new'
@@ -43,6 +41,15 @@ class Car ( models.Model ) :
 
 	def set_status_to_sold ( self ) :
 		self.status = 'sold'
+		template_id = self.env.ref ( 'boris_odoo.car_mail_template' )
+		if template_id and self.driver_id.email :
+			template_id.send_mail (
+				self.id,
+				force_send = True,
+				raise_exception = True,
+				email_values = { 'email_to' : self.driver_id.email }
+			)
+			print ( '*********** ', self.driver_id.email )
 
 
 class Parking ( models.Model ) :

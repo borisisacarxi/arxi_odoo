@@ -21,7 +21,7 @@
 	'version' : '0.1',
 
 	# any module necessary for this one to work correctly
-	'depends' : ['base'],
+	'depends' : ['base', 'mail'],
 
 	# always loaded
 	'data' : [
@@ -34,6 +34,7 @@
 		'views/parking.xml',
 		'views/sequence.xml',
 		'views/res_partner_inherit_form_view.xml',
+		'data/car_template_mail.xml'
 
 	],
 	# only loaded in demonstration mode
