@@ -25,11 +25,11 @@
 			</form >
 		</field >
 	</record >
-	<act_window id = "wizard_action_window_car"
-				name = "Car Wizard"
-				binding_model = "car.car"
-				res_model = "car.wizard"
-				view_mode = "form"
-				target = "new" />
+<!--	<act_window id = "wizard_action_window_car"-->
+<!--				name = "Car Wizard"-->
+<!--				binding_model = "car.car"-->
+<!--				res_model = "car.wizard"-->
+<!--				view_mode = "form"-->
+<!--				target = "new" />-->
 
 </odoo >
