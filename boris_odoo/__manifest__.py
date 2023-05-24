@@ -34,7 +34,8 @@
 		'views/parking.xml',
 		'views/sequence.xml',
 		'views/res_partner_inherit_form_view.xml',
-		'data/car_template_mail.xml'
+		'data/car_template_mail.xml',
+		'views/securety.xml'
 
 	],
 	# only loaded in demonstration mode
