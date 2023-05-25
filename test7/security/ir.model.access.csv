@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+test7.access_pc_pc,access_pc_pc,test7.model_pc_pc,base.group_user,1,1,1,1
