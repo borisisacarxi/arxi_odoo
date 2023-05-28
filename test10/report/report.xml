@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+	<report
+		id="report_pc_info"
+		string="Report PC"
+		model="pc.pc"
+		report_type="qweb-pdf"
+		name="test7.report_pc"
+		file="test7.report_pc"
+	/>
+</odoo>
