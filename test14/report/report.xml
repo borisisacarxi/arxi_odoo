@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo >
+	<report
+		id = "report_pc_info"
+		model = "ir.actions.report"
+		name = "test7.report_pc"
+		string = "Report PC"
+		report_type = "qweb-pdf"
+		file = "test7.report_pc"
+	/>
+</odoo >
