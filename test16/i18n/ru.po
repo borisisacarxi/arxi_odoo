@@ -1,0 +1,371 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* test7
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-29 14:32+0000\n"
+"PO-Revision-Date: 2023-05-29 14:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: test7
+#: model:mail.template,body_html:test7.pc_email_template_break
+msgid ""
+"<h1>INFORMATION about\n"
+"\t\t\t\t\t<t t-esc=\"object.name\"></t>\n"
+"\t\t\t\t\t<br>\n"
+"\t\t\t\t</h1>\n"
+"\t\t\t\t<p>\n"
+"\t\t\t\t\tDear<t t-esc=\"object.developer.name\"></t>,\n"
+"\t\t\t\t\t<br>\n"
+"\t\t\t\t\tWe regreat with announce than your\n"
+"\t\t\t\t\t<t t-esc=\"object.name\"></t>\n"
+"\t\t\t\t\twith caracteristics\t<br>\n"
+"\t\t\t\t\tBRAND : <t t-esc=\"object.brand\"></t><br>\n"
+"\t\t\t\t\tRAM : <t t-esc=\"object.ram\"></t> GB<br>\n"
+"\t\t\t\t\tFEATURES:\n"
+"\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t<t t-foreach=\"object.feature_ids\" t-as=\"obj\">\n"
+"\t\t\t\t\t\t\t<li>\n"
+"\t\t\t\t\t\t\t\t<t t-esc=\"obj.name\"></t>\n"
+"\t\t\t\t\t\t\t</li>\n"
+"\t\t\t\t\t\t</t>\n"
+"\t\t\t\t\t</ul>\n"
+"\t\t\t\t\tMB : <t t-esc=\"object.mb\"></t><br>\n"
+"\t\t\t\t\tCPU : <t t-esc=\"object.cpu\"></t><br>\n"
+"\t\t\t\t\tGPU : <t t-esc=\"object.gpu\"></t><br>\n"
+"\t\t\t\t\tPEIPHERY : <t t-esc=\"object.periphery_id.name\"></t><br>\n"
+"\t\t\t\t\t<br>\n"
+"\t\t\t\t\thas been broken\n"
+"\t\t\t\t</p>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.pc_form
+msgid "ASUS Model XPTO"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__brand
+msgid "Brand"
+msgstr "Брэнд"
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "Brand:"
+msgstr "Брэнд"
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.pc_form
+msgid "Broken"
+msgstr "Сломан"
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__cpu
+msgid "CPU"
+msgstr "Проц"
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "CPU:"
+msgstr "Проц"
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.update_ram_wizard_form
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: test7
+#: model:ir.model,name:test7.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature__create_uid
+#: model:ir.model.fields,field_description:test7.field_pc_pc__create_uid
+#: model:ir.model.fields,field_description:test7.field_pc_wizard__create_uid
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature__create_date
+#: model:ir.model.fields,field_description:test7.field_pc_pc__create_date
+#: model:ir.model.fields,field_description:test7.field_pc_wizard__create_date
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__developer
+msgid "Developer"
+msgstr "Разраб"
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "Developer:"
+msgstr "Разраб"
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature__display_name
+#: model:ir.model.fields,field_description:test7.field_pc_pc__display_name
+#: model:ir.model.fields,field_description:test7.field_pc_wizard__display_name
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: test7
+#: model:ir.actions.act_window,name:test7.pc_wizard_action
+msgid "Edit Ram"
+msgstr "Обновить ОЗУ"
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__feature_ids
+msgid "Features"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "Features:"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__gpu
+msgid "GPU"
+msgstr "Видюха"
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "GPU:"
+msgstr "Видюха"
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature__id
+#: model:ir.model.fields,field_description:test7.field_pc_pc__id
+#: model:ir.model.fields,field_description:test7.field_pc_wizard__id
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__id
+msgid "ID"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature____last_update
+#: model:ir.model.fields,field_description:test7.field_pc_pc____last_update
+#: model:ir.model.fields,field_description:test7.field_pc_wizard____last_update
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature__write_uid
+#: model:ir.model.fields,field_description:test7.field_pc_pc__write_uid
+#: model:ir.model.fields,field_description:test7.field_pc_wizard__write_uid
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature__write_date
+#: model:ir.model.fields,field_description:test7.field_pc_pc__write_date
+#: model:ir.model.fields,field_description:test7.field_pc_wizard__write_date
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__mb
+msgid "Mother Board"
+msgstr "Мать"
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "MotherBoard:"
+msgstr "Мать"
+
+#. module: test7
+#: model:ir.model.fields.selection,name:test7.selection__pc_pc__status__new
+msgid "NEW"
+msgstr "Новый"
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_feature__name
+#: model:ir.model.fields,field_description:test7.field_pc_pc__name
+msgid "Name"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.pc_form
+msgid "New"
+msgstr ""
+
+#. module: test7
+#: model:ir.actions.act_window,name:test7.pc_action
+#: model:ir.ui.menu,name:test7.pc_menu
+msgid "PC"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "PC REPORT"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__pc_ids
+msgid "PC's"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_res_partner__msg_other_information
+#: model:ir.model.fields,field_description:test7.field_res_users__msg_other_information
+msgid "Pai toto?"
+msgstr ""
+
+#. module: test7
+#: model:mail.template,subject:test7.pc_email_template_break
+msgid "Pc Broken {{ object.name }}"
+msgstr ""
+
+#. module: test7
+#: model:mail.template,name:test7.pc_email_template_break
+msgid "Pc Mail Template Break"
+msgstr ""
+
+#. module: test7
+#: model:ir.actions.act_window,name:test7.wizard_action_window_pc
+#: model:ir.model,name:test7.model_pc_wizard
+msgid "Pc Wizard"
+msgstr ""
+
+#. module: test7
+#: model:ir.model,name:test7.model_pc_pc
+msgid "Pc class"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__periphery_id
+msgid "Perephery"
+msgstr ""
+
+#. module: test7
+#: model:ir.actions.act_window,name:test7.periphery_action
+#: model:ir.model.fields,field_description:test7.field_periphery_periphery__name
+msgid "Periphery"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "Periphery:"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "Product Name:"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__ram
+msgid "Ram"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "Ram:"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__recomended_ram
+msgid "Recomended RAM"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "Recomended RAM:"
+msgstr ""
+
+#. module: test7
+#: model:ir.actions.report,name:test7.report_pc_info
+msgid "Report PC"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_res_partner__position_role
+#: model:ir.model.fields,field_description:test7.field_res_users__position_role
+msgid "Role"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_pc__status
+msgid "Status"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields.selection,name:test7.selection__pc_pc__status__used
+msgid "USED"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.update_ram_wizard_form
+msgid "Update"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields,field_description:test7.field_pc_wizard__ram_update
+msgid "Update RAM"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.pc_form
+msgid "Update Ram"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.pc_form
+msgid "Used"
+msgstr ""
+
+#. module: test7
+#: model:ir.model.fields.selection,name:test7.selection__pc_pc__status__broken
+msgid "broken"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.report_pc
+msgid "gb"
+msgstr ""
+
+#. module: test7
+#: model:ir.model,name:test7.model_pc_feature
+msgid "many futers fom many pc"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.filter_search_pc
+msgid "my_first_search"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.filter_search_pc
+msgid "name"
+msgstr ""
+
+#. module: test7
+#: model_terms:ir.ui.view,arch_db:test7.filter_search_pc
+msgid "pc search"
+msgstr ""
+
+#. module: test7
+#: model:ir.ui.menu,name:test7.periphery_menu
+msgid "periphery"
+msgstr ""
+
+#. module: test7
+#: model:ir.model,name:test7.model_periphery_periphery
+msgid "periphery for pc"
+msgstr ""
