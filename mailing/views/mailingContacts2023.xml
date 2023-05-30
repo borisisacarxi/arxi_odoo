@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo >
+	<!--FORM-->
+	<record id = "mail_form" model = "ir.ui.view" >
+		<field name = "name" >mail.form</field >
+		<field name = "model" >mailinglist.mailinglist</field >
+		<field name = 'arch' type = "xml" >
+			<sheet >
+				<form >
+					<group >
+						<group >
+							<div style = "border-style: dotted; " >
+								<field name = "picture" widget = "image" />
+							</div >
+						</group >
+						<group ></group >
+						<group >
+							<field name = "name" />
+							<field name = "gender" />
+							<field name = "phone" />
+							<field name = "email" />
+						</group >
+						<group >
+							<field name = "street" />
+							<field name = "city" />
+							<field name = "state" />
+							<field name = "country" />
+							<field name = "postcode" />
+						</group >
+					</group >
+
+				</form >
+			</sheet >
+		</field >
+	</record >
+
+	<!--TREE -->
+
+	<record id = "mail_tree" model = "ir.ui.view" >
+		<field name = "name" >mail.tree</field >
+		<field name = "model" >mailinglist.mailinglist</field >
+		<field name = 'arch' type = "xml" >
+			<tree >
+				<field name = "name" />
+				<field name = "gender" />
+				<field name = "email" />
+				<field name = "phone" />
+<!--				<field name = "picture" />-->
+				<field name = "street" />
+				<field name = "city" />
+				<field name = "state" />
+				<field name = "country" />
+				<field name = "postcode" />
+			</tree >
+		</field >
+	</record >
+
+	<!-- ACTION -->
+	<record id = "mail_action" model = "ir.actions.act_window" >
+		<field name = "name" >mail.form</field >
+		<field name = 'type' >ir.actions.act_window</field >
+		<field name = "res_model" >mailinglist.mailinglist</field >
+		<field name = "view_mode" >tree,form</field >
+	</record >
+
+	<!--- MENU -->
+	<menuitem id = "mail_menu" name = "Email" sequence = "1" action = "mail_action" />
+</odoo >
