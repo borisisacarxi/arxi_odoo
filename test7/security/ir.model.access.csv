@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_pc_pc_user,access for user,model_pc_pc,base.group_user,1,0,0,0
+access_pc_pc_manager,access for manager,model_pc_pc,group_manager,1,1,1,0
+access_pc_pc_super_manager,access for super manager,model_pc_pc,group_super_manager,1,1,1,1
+
+
+access_periphery_periphery,access_periphery_periphery,model_periphery_periphery,base.group_user,1,1,1,1
+access_pc_feature,access_pc_feature,model_pc_feature,base.group_user,1,1,1,1
+access_pc_wizard,access_pc_wizard,model_pc_wizard,base.group_user,1,1,1,1
+access_reportinfopc_reportinfopc,access_reportinfopc_reportinfopc,model_reportinfopc_reportinfopc,base.group_user,1,1,1,1

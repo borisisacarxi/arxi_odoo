@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo >
+	<record id = "pc_wizard_action" model = "ir.actions.act_window" >
+		<field name = "name" >Edit Ram</field >
+		<field name = "type" >ir.actions.act_window</field >
+		<field name = "res_model" >pc.wizard</field >
+		<field name = "view_mode" >form</field >
+		<field name = "target" >new</field >
+	</record >
+
+	<record id = "update_ram_wizard_form" model = "ir.ui.view" >
+		<field name = "name" >pc.wizar.form</field >
+		<field name = "model" >pc.wizard</field >
+		<field name = "arch" type = "xml" >
+			<form >
+				<field name = "ram_update" />
+				<footer >
+					<button string = "Update" name = "update_new_ram" type = "object" class = "btn-primary" />
+					<button string = "Cancel" class = "btn-default" special = "cancel" />
+				</footer >
+			</form >
+		</field >
+	</record >
+
+	<act_window id = "wizard_action_window_pc" name = "Pc Wizard" binding_model = "pc.pc" res_model = "pc.wizard"
+				view_mode = "form" target = "new" />
+
+</odoo >

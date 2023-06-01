@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo >
+	<!-- form -->
+	<record id = "mailingcontact_form_inherit" model = "ir.ui.view" >
+		<field name = "name" >Mailingcontact form inherit</field >
+		<field name = "model" >mailing.contact</field >
+		<field name = "inherit_id" ref = "mass_mailing.mailing_contact_view_form" />
+		<field name = "arch" type = "xml" >
+			<xpath expr = "//field[@name='name']" position = "before" >
+				<div style = "width: 150px ; height: 150px; display:grid; float: right;" >
+					<field name = "picture" widget = "image" />
+				</div >
+			</xpath >
+			<xpath expr = "//field[@name='country_id']" position = "after" >
+				<field name = "gender" />
+				<field name = "phone" />
+				<field name = "city" />
+				<field name = "street" />
+			</xpath >
+			<xpath expr = "//field[@name='message_bounce']" position = "after" >
+				<field name = "state" />
+				<field name = "postcode" />
+				<button name = "create_one_user" type = "object" string = "Create User" />
+				<button name = "open_wizard" type = "object" string = "Create Users" attrs = "{'invisible': [('name', '!=',False)]}"/>
+				<button name = "delete_all_records" type = "object" string = "DELETE LIST" />
+			</xpath >
+		</field >
+	</record >
+
+	<!--		&lt;!&ndash; tree &ndash;&gt;-->
+	<!--		<record id = "mailingcontact_tree" model = "ir.ui.view" >-->
+	<!--			<field name = "name" >mailingcontact.form</field >-->
+	<!--			<field name = "model" >mailingcontacts.mailingcontacts</field >-->
+	<!--			<field name = "arch" type = "xml" >-->
+	<!--				<tree >-->
+	<!--					<field name = "gender" />-->
+	<!--				</tree >-->
+	<!--			</field >-->
+	<!--		</record >-->
+
+	<!--		&lt;!&ndash; action &ndash;&gt;-->
+	<!--		<record id = "mailingcontact_action" model = "ir.actions.act_window" >-->
+	<!--			<field name = "name" >mailingcontact.form</field >-->
+	<!--			<field name = "type" >ir.actions.act_window</field >-->
+	<!--			<field name = "res_model" >mailingcontacts.mailingcontacts</field >-->
+	<!--			<field name = "view_mode" >tree,form</field >-->
+	<!--		</record >-->
+
+	<!--	 MANU -->
+	<!--		<menuitem id = "mailingcontact_menu" name = "Mail_Conts" sequence = "2" action = "mailingcontact_action" />-->
+</odoo >

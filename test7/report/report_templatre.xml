@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo >
+	<template id = "report_pc" >
+		<t t-call = "web.html_container" >
+			<!--<t t-call = "web.external_layout" >-->
+			<t t-foreach = "docs" t-as = "o" >
+				<div class = "page" >
+					<h1 >PC REPORT</h1 >
+					<p >Product Name:
+						<t t-esc = "o.name" />
+					</p >
+					<p >Brand:
+						<t t-esc = "o.brand" />
+					</p >
+					<p >Ram:
+						<t t-esc = "o.ram" />
+						GB
+					</p >
+					<p >MotherBoard:
+						<t t-esc = "o.mb" />
+					</p >
+					<p >CPU:
+						<t t-esc = "o.cpu" />
+					</p >
+					<p >GPU:
+						<t t-esc = "o.gpu" />
+					</p >
+					<p >Developer:
+						<t t-esc = "o.developer.name" />
+					</p >
+					<p >Features:</p >
+					<ul >
+						<t t-foreach = "o.feature_ids" t-as = "obj" >
+							<li >
+								<t t-esc = "obj.name" />
+							</li >
+						</t >
+					</ul >
+					<p >Periphery:
+						<t t-esc = "o.periphery_id.name" />
+					</p >
+					<p >Recomended RAM:
+						<t t-esc = "o.recomended_ram" />
+					</p >
+
+				</div >
+			</t >
+		</t >
+	</template >
+</odoo >
