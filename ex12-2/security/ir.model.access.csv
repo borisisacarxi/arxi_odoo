@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ex12-2_ex12-2,ex12-2.ex12-2,model_ex12-2_ex12-2,base.group_user,1,1,1,1

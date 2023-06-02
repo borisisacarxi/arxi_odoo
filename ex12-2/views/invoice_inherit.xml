@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo >
+	<record id = "invoice_inherit_contact_person" model = "ir.ui.view" >
+		<field name = "name" >Invoice person contact form inherit</field >
+		<field name = "model" >res.partner</field >
+		<field name = "inherit_id" ref = "base.view_partner_form" />
+		<field name = "arch" type = "xml" >
+			<xpath expr = "//field[@name='team_id']" position = "before" >
+				<field name = "invoice_contact_person_field" />
+			</xpath >
+		</field >
+	</record >
+</odoo >
