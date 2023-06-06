@@ -7,7 +7,7 @@
 		<field name = "inherit_id" ref = "sale.view_order_form" />
 		<field name = "arch" type = "xml" >
 			<xpath expr = "//field[@name='user_id']" position = "after" >
-				<field name = "sale_contact_person_field"/>
+				<field name = "sale_contact_person_field" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
 			</xpath >
 		</field >
 	</record >

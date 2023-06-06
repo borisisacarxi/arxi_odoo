@@ -21,7 +21,7 @@
 	'version': '0.1',
 
 	# any module necessary for this one to work correctly
-	'depends': ['base', 'crm', 'sale', 'sale_crm'],
+	'depends': ['base', 'crm', 'sale', 'sale_crm', 'account'],
 
 	# always loaded
 	'data': [
@@ -30,7 +30,8 @@
 		'views/templates.xml',
 		'views/crm_inherit.xml',
 		'views/sales_inherit.xml',
-		'views/invoice_inherit.xml'
+		'views/invoice_inherit.xml',
+		'views/report_sale_order_product_inherit.xml',
 	],
 	# only loaded in demonstration mode
 	'demo': [

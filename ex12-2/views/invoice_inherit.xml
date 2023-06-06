@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<odoo >
-	<record id = "invoice_inherit_contact_person" model = "ir.ui.view" >
-		<field name = "name" >Invoice person contact form inherit</field >
-		<field name = "model" >res.partner</field >
-		<field name = "inherit_id" ref = "base.view_partner_form" />
-		<field name = "arch" type = "xml" >
-			<xpath expr = "//field[@name='team_id']" position = "before" >
-				<field name = "invoice_contact_person_field" />
-			</xpath >
-		</field >
-	</record >
-</odoo >
+<odoo>
+	<record id = "invoice_inherit_contact_person" model = "ir.ui.view">
+		<field name = "name">Invoice person contact form inherit</field>
+		<field name = "model">account.move</field>
+		<field name = "inherit_id" ref = "account.view_move_form" />
+		<field name = "arch" type = "xml">
+			<xpath expr = "//field[@name='invoice_user_id']" position = "after">
+				<field name = "invoice_contact_person_field" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>
