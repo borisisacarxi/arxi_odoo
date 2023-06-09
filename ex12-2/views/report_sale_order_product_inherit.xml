@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+	<template id = "report_saleorder_document" inherit_id = "sale.report_saleorder_document">
+		<xpath expr = "//div[hasclass('row')]" position = "after">
+			<div>
+				<strong>Contact Person:</strong>
+				<p class="m-0" t-field="doc.sale_contact_person_field"/>
+			</div>
+		</xpath>
+	</template>
+</odoo>
