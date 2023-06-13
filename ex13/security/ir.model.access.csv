@@ -1,2 +1,0 @@
-id , name , model_id:id , group_id:id , perm_read , perm_write , perm_create , perm_unlink
-ex13.access_tabele_one_2_many_tabele_one_2_many , access_tabele_one_2_many_tabele_one_2_many , ex13.model_tabele_one_2_many_tabele_one_2_many , base.group_user , 1 , 1 , 1 , 1
