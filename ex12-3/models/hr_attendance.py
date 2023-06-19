@@ -10,12 +10,7 @@ class HrAttendance(models.Model):
 
 	def check_out_cron(self):
 		user = self.env.user
-		# print(checked_out_records)
-		server_datetime= datetime.datetime.now()
-		# print('******** SERVER:', server_datetime)
 		attendances_without_checkout = self.env['hr.attendance'].search([('check_out', '=', False)])
-		# print('---------------',len(attendances_without_checkout))
-		# print(attendances_without_checkout.read())
 		attendances_without_checkout.check_and_auto_checkout()
 
 	def check_and_auto_checkout(self):
